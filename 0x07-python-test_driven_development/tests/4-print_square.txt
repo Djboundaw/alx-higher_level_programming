@@ -1,0 +1,29 @@
+The ``Print square`` module
+===========================
+
+Using ``print_square`` function
+-------------------------------
+
+	>>> print_square = __import__('4-print_square').print_square
+
+Testing with correct value
+	>>> print_square(4)
+	####
+	####
+	####
+	####
+
+Testing with size = 0
+	>>> print_square(0)
+	
+
+Testing with a negative float
+	>>> try:
+	... 	print_square(-2.5)
+	... except Exception as e:
+	... 	print(e)
+	...
+	size must be an integer
+
+
+Test file must be empty

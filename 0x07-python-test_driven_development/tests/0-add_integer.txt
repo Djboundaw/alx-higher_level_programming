@@ -1,15 +1,52 @@
-#!/usr/bin/python3
-add_integer = __import__('0-add_integer').add_integer
+The ``integers addition`` module
+================================
 
-print(add_integer(1, 2))
-print(add_integer(100, -2))
-print(add_integer(2))
-print(add_integer(100.3, -2))
-try:
-    print(add_integer(4, "School"))
-except Exception as e:
-    print(e)
-try:
-    print(add_integer(None))
-except Exception as e:
-    print(e)
+Using ``add_integer``
+---------------------
+
+Testing the code for two integers
+	>>> add_integer = __import__('0-add_integer').add_integer
+	>>> print(add_integer(1, 2))
+	3
+	
+Testing our code when second argument is negative number
+	>>> print(add_integer(100, -2))
+	98
+
+Testing the code when there is only one argument given to the function
+	>>> print(add_integer(2))
+	100
+
+When only one argument is given the function added it to it's previous value
+
+Testing with float numbers
+	>>> print(add_integer(100.3, -2))
+	98
+
+	>>> print(add_integer(100.3, -2.9))
+	98
+
+floats are casted to integers
+
+Testing with non integers arguments
+	>>> try:
+	...	print(add_integer(4, "School"))
+	... except Exception as e:
+	...	print(e)
+	...
+	b must be an integer
+
+	>>> try:
+	... 	print(add_integer("Best", "School"))
+	... except Exception as e:
+	... 	print(e)
+	...
+	a must be an integer
+
+Testing with None value
+	>>> try:
+	... 	print(add_integer(None))
+	... except Exception as e:
+	... 	print(e)
+	...
+	a must be an integer

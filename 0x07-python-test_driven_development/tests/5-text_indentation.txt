@@ -1,0 +1,16 @@
+The ``Text indentation`` module
+===============================
+
+Using ``text_indetation`` function
+----------------------------------
+
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+
+Testing when text is not a string
+	>>> try:
+	... 	text_indentation(123)
+	... except Exception as e:
+	... 	print(e)
+	...
+	text must be a string
