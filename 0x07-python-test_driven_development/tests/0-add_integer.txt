@@ -11,13 +11,10 @@ Testing the code for two integers
 	>>> print(add_integer(1, 2))
 	3
 
-Testing the code when a is None
-	>>> print(add_integer(, 2))
+Testing the code with NaN
+	>>> print(add_integer(NaN))
 	a must be an integer
 
-Testing the code when b is None
-	>>> print(add_integer(1, ))
-	b must be an integer
 
 Testing our code when second argument is negative number
 	>>> print(add_integer(100, -2))
