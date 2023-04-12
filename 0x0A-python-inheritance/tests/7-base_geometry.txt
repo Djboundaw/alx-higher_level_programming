@@ -1,0 +1,52 @@
+The ``Integer Validator`` module
+== == == == == == == == == == ==
+
+
+Using method ``integer_validator``
+----------------------------------
+
+
+Import function from the module:
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Testing for docstring:
+	>>> moduleDoc = __import__('7-base_geometry').__doc__
+	>>> len(moduleDoc) > 1
+	True
+
+	>>> classDoc = __import__('7-base_geometry').BaseGeometry.__doc__
+	>>> len(classDoc) > 1
+	True
+
+	>>> methodDoc = __import__('7-base_geometry').BaseGeometry.integer_validator.__doc__
+	>>> len(methodDoc) > 1
+	True
+
+Testing the code with integer value
+	>>> bg = BaseGeometry()
+
+	>>> bg.integer_validator("my_int", 12)
+
+Testing code with a string
+	>>> try:
+	... 	bg.integer_validator("name", "John")
+	... except Exception as e:
+	... 	print(e)
+	...
+	name must be an integer
+
+Testing with 0
+	>>> try:
+	... 	bg.integer_validator("my_int", 0)
+	... except Exception as e:
+	... 	print(e)
+	...
+	my_int must be greater than 0
+
+Testing with negative value
+	>>> try:
+	... 	bg.integer_validator("distance", -4)
+	... except Exception as e:
+	... 	print(e)
+	...
+	distance must be greater than 0
