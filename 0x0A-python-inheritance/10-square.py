@@ -1,16 +1,15 @@
 #!/usr/bin/python3
-""" Creating a new class inheritance of BaseGeometry """
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
+""" Creating a new class Square inheritance of Rectangle """
+Rectangle = __import__('9-rectangle').Rectangle
 
 
-class Square(BaseGeometry):
-    """ Creating a subclass of BaseGoemetry"""
+class Square(Rectangle):
+    """ Creating a subclass of Rectangle"""
     def __init__(self, size):
         """initialization of subclass
 
         Args:
-            width (int): width of parameter
-            height (int): height of the parameter
+            size (int): size of the square
         """
         self.integer_validator("size", size)
         self.__size = size
