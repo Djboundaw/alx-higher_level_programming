@@ -12,6 +12,5 @@ def save_to_json_file(my_obj, filename):
         my_obj: python object
         filename: where to write content of my_obj
     """
-    my_str = json.dumps(my_obj)
     with open(filename, 'w') as f:
-        return f.write(my_str)
+        return f.write(json.dumps(my_obj))
