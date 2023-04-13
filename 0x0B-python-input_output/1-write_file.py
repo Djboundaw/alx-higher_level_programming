@@ -9,5 +9,5 @@ def write_file(filename="", text=""):
         filename: name of file
         text: string to write into file
     """
-    with open(filename, "w", encoding="utf-8") as f:
+    with open(filename, 'w') as f:
         return f.write(text)
