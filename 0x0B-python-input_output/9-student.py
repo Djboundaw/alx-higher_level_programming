@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """ Creating class student """
+class_to_json = __import__('8-class_to_json').class_to_json
 
 
 class Student:
@@ -19,4 +20,4 @@ class Student:
 
     def to_json(self):
         """Dictionary representation of Student"""
-        return self.__dict__
+        return class_to_json(self)
