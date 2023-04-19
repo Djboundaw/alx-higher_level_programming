@@ -20,34 +20,53 @@ class Rectangle(Base):
         self.y = y
         super().__init__(id)
 
-    def get_width(self):
+    @property
+    def width(self):
         """getter method for the arg width"""
         return self.__width
 
-    def set_width(self, width):
+    @width.setter
+    def width(self, width):
         """setter method for width"""
+        if type(width) != int:
+            raise TypeError("width must be an integer")
+        if width <= 0:
+            raise ValueError("width must be positive")
         self.__width = width
 
-    def get_height(self):
+
+    @property
+    def height(self):
         """getter method for height"""
         return self.__height
 
-    def set_height(self, height):
+    @height.setter
+    def height(self, height):
         """setter method for height"""
+        if type(height) != int:
+            raise TypeError("height must be an integer")
+        if height <= 0:
+            raise ValueError("height must be positive")
         self.__height = height
 
-    def get_x(self):
+    
+    @property
+    def x(self):
         """"getter method for x"""
         return self.__x
 
-    def set_x(self, x):
+    @x.setter
+    def x(self, x):
         """setter method for x"""
         self.__x = x
 
-    def get_y(self):
+    
+    @property
+    def y(self):
         """getter method for y"""
         return self.__y
 
-    def set_y(self, y):
+    @y.setter
+    def y(self, y):
         """setter method for y"""
         self.__y = y
