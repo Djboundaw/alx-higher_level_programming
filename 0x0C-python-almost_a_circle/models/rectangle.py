@@ -34,7 +34,6 @@ class Rectangle(Base):
             raise ValueError("width must be positive")
         self.__width = width
 
-
     @property
     def height(self):
         """getter method for height"""
@@ -49,7 +48,6 @@ class Rectangle(Base):
             raise ValueError("height must be positive")
         self.__height = height
 
-    
     @property
     def x(self):
         """"getter method for x"""
@@ -60,7 +58,6 @@ class Rectangle(Base):
         """setter method for x"""
         self.__x = x
 
-    
     @property
     def y(self):
         """getter method for y"""
