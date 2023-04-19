@@ -92,7 +92,7 @@ class Rectangle(Base):
     def __str__(self):
         x = self.__x
         y = self.__y
-        L = self.__height
-        l = self.__width
+        Lon = self.__height
+        lar = self.__width
         my_str = "[Rectangle]"
-        return "{} ({}) {}/{} - {}/{}".format(my_str, self.id, x, y, l, L)
+        return "{} ({}) {}/{} - {}/{}".format(my_str, self.id, x, y, lar, Lon)
