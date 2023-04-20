@@ -16,3 +16,18 @@ class Square(Rectangle):
         y = self.y
         width = self.width
         return "{} ({}) {}/{} - {}".format(my_str, self.id, x, y, width)
+
+    @property
+    def size(self):
+        """getter method for size of the square"""
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        """setter for the size of a square"""
+        if type(value) != int:
+            raise TypeError("width must be an integer")
+        if value <= 0:
+            raise ValueError("width must be > 0")
+        self.width = value
+        self.height = value
