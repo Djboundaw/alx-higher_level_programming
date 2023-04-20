@@ -100,3 +100,16 @@ class Rectangle(Base):
         lar = self.__width
         my_str = "[Rectangle]"
         return "{} ({}) {}/{} - {}/{}".format(my_str, self.id, x, y, lar, Lon)
+
+    def update(self, *argv):
+        """Public method
+        assigns an argument to attributes"""
+        self.id = argv[0]
+        if len(argv) > 1:
+            self.__width = argv[1]
+        if len(argv) > 2:
+            self.__height = argv[2]
+        if len(argv) > 3:
+            self.__x = argv[3]
+        if len(argv) > 4:
+            self.__y = argv[4]
