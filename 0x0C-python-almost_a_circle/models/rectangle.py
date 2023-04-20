@@ -132,7 +132,7 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """ public method
-        Returns dictionary representation of square """
+        Returns dictionary representation of rectangle """
         return {
                 "id": self.id,
                 "width": self.width,
