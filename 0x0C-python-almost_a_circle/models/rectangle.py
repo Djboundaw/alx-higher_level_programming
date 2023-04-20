@@ -101,15 +101,31 @@ class Rectangle(Base):
         my_str = "[Rectangle]"
         return "{} ({}) {}/{} - {}/{}".format(my_str, self.id, x, y, lar, Lon)
 
-    def update(self, *argv):
+    def update(self, *args, **kwargs):
         """Public method
         assigns an argument to attributes"""
-        self.id = argv[0]
-        if len(argv) > 1:
-            self.__width = argv[1]
-        if len(argv) > 2:
-            self.__height = argv[2]
-        if len(argv) > 3:
-            self.__x = argv[3]
-        if len(argv) > 4:
-            self.__y = argv[4]
+        if args and len(args) != 0:
+            self.id = args[0]
+            if len(args) > 1:
+                self.width = args[1]
+            elif len(args) > 2:
+                self.height = args[2]
+            elif len(args) > 3:
+                self.x = args[3]
+            else:
+                self.y = args[4]
+        elif not args and len(kwargs) != 0:
+            for k, v in kwargs.items():
+                if k == "id":
+                    if v is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = v
+                elif k == "width" and v:
+                    self.width = v
+                elif k == "height" and v:
+                    self.height = v
+                elif k == "x" and v:
+                    self.x = v
+                elif k == "y" and v:
+                    self.y = v
