@@ -129,3 +129,14 @@ class Rectangle(Base):
                     self.x = v
                 elif k == "y" and v:
                     self.y = v
+
+    def to_dictionary(self):
+        """ public method
+        Returns dictionary representation of square """
+        return {
+                "id": self.id,
+                "width": self.width,
+                "height": self.height,
+                "x": self.x,
+                "y": self.y
+                }
